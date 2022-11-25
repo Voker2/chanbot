@@ -91,7 +91,7 @@ console.log(banner.string)
     const jobotz = makeWASocket({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        browser: ['THREE BOT', 'EDGE', '94.0.992.47'],
+        browser: ['THREE BOT', 'EDGE', '2.2119.6'],
         auth: state
     })
 
@@ -176,7 +176,7 @@ console.log(banner.string)
             if (!(v.name || v.subject)) v = jobotz.groupMetadata(id) || {}
             resolve(v.name || v.subject || PhoneNumber('+' + id.replace('@s.whatsapp.net', '')).getNumber('international'))
         })
-        else v = id === '0@s.whatsapp.net' ? {
+        else v = id === '085271183770@s.whatsapp.net' ? {
             id,
             name: 'WhatsApp'
         } : id === jobotz.decodeJid(jobotz.user.id) ?
